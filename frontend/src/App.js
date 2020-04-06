@@ -50,7 +50,6 @@ class App extends Component {
   };
   renderItems = () => {
     const { viewCompleted } = this.state;
-    console.log(this.state.todoList);
     const newItems = this.state.todoList.filter(
       item => item.completed === viewCompleted
     );
