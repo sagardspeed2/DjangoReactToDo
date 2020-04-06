@@ -50,6 +50,7 @@ class App extends Component {
   };
   renderItems = () => {
     const { viewCompleted } = this.state;
+    console.log(this.state.todoList);
     const newItems = this.state.todoList.filter(
       item => item.completed === viewCompleted
     );
@@ -91,17 +92,17 @@ class App extends Component {
     this.toggle();
     if (item.id) {
       axios
-        .put(`https://django-react-todo.herokuapp.com/api/todos/${item.id}/`, item)
+        .put(`http://django-react-todo.herokuapp.com/api/todos/${item.id}/`, item)
         .then(res => this.refreshList());
       return;
     }
     axios
-      .post("https://django-react-todo.herokuapp.com/api/todos/", item)
+      .post("http://django-react-todo.herokuapp.com/api/todos/", item)
       .then(res => this.refreshList());
   };
   handleDelete = item => {
     axios
-      .delete(`https://django-react-todo.herokuapp.com/api/todos/${item.id}`)
+      .delete(`http://django-react-todo.herokuapp.com/api/todos/${item.id}`)
       .then(res => this.refreshList());
   };
   createItem = () => {
