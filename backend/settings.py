@@ -25,7 +25,7 @@ SECRET_KEY = 'iaz-b1h(7y@qy3yd+a!2k_-i+@=n4868rl#(#tvz$rw*_+^jo@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-react-todo.herokuapp.com', 'http://127.0.0.1:8000/', 'http://localhost:8000/']
 
 
 # Application definition
